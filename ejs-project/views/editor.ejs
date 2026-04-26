@@ -1,0 +1,113 @@
+<%- include('partials/head') %>
+
+<%- include('partials/navbar') %>
+
+<div class="App" id="app">
+  <main class="main-content">
+    <div class="code-editor-page">
+      <div class="container">
+
+        <!-- Header -->
+        <div class="editor-header fade-in">
+          <h1 class="editor-title">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2" stroke="currentColor" stroke-width="2" fill="none"/>
+              <path d="M9 9h6M9 13h6M9 17h3" stroke="currentColor" stroke-width="2"/>
+            </svg>
+            Interactive Code Editor
+          </h1>
+          <p class="editor-subtitle">
+            Write, test, and execute Dijkstra's algorithm in real-time
+          </p>
+        </div>
+
+        <!-- Main Editor Layout -->
+        <div class="editor-layout">
+
+          <!-- Code Editor Section -->
+          <div class="editor-section slide-in-left">
+            <div class="editor-card">
+              <div class="editor-toolbar">
+                <div class="language-selector">
+                  <label for="language">Language:</label>
+                  <select id="language" class="language-select">
+                    <option value="cpp">C++</option>
+                  </select>
+                </div>
+                <button id="runBtn" class="run-button">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                    <polygon points="5,3 19,12 5,21" fill="currentColor"/>
+                  </svg>
+                  Run Code
+                </button>
+              </div>
+              <div class="code-editor-container">
+                <textarea
+                  id="codeInput"
+                  class="code-input"
+                  placeholder="Enter your Dijkstra algorithm code here..."
+                  spellcheck="false"
+                ></textarea>
+              </div>
+            </div>
+          </div>
+
+          <!-- Output Section -->
+          <div class="output-section slide-in-right">
+            <div class="output-card">
+              <div class="output-header">
+                <h3>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2" stroke="currentColor" stroke-width="2" fill="none"/>
+                    <path d="M8 21l4-7 4 7" stroke="currentColor" stroke-width="2"/>
+                  </svg>
+                  Output
+                </h3>
+                <button class="clear-button" id="clearBtn" style="display:none;">Clear</button>
+              </div>
+              <div class="output-content" id="outputContent">
+                <div class="output-placeholder" id="outputPlaceholder">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
+                    <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2"/>
+                  </svg>
+                  <p>Click "Run Code" to see the output</p>
+                </div>
+                <pre class="output-text" id="outputText" style="display:none;"></pre>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Algorithm Info -->
+        <div class="algorithm-info fade-in">
+          <h2>About This Implementation</h2>
+          <div class="info-grid">
+            <div class="info-card">
+              <h3>Algorithm Features</h3>
+              <ul>
+                <li>✅ Priority queue optimization</li>
+                <li>✅ Handles weighted graphs</li>
+                <li>✅ O((V + E) log V) complexity</li>
+                <li>✅ Finds shortest paths from source</li>
+              </ul>
+            </div>
+            <div class="info-card">
+              <h3>Code Structure</h3>
+              <ul>
+                <li>📊 Graph representation using adjacency list</li>
+                <li>🔄 Priority queue for efficient vertex selection</li>
+                <li>📏 Distance array to track shortest paths</li>
+                <li>🎯 Source vertex as starting point</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+</div>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,7 @@
+{
+  "name": "dijkstra_algo",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "description": "Dijkstra Algorithm Visualizer - Multi-service deployment"
+}
